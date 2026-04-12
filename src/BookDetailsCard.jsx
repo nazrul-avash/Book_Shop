@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { BookContext } from './BookContext';
 
 const BookDetailsCard = ({expectedBook}) => {
-    const {handleMarkAsRead,storedBook} = useContext(BookContext);
+    const {handleMarkAsRead,storedBook,handleWishList,} = useContext(BookContext);
 
 
     return (
@@ -31,7 +31,7 @@ const BookDetailsCard = ({expectedBook}) => {
 
            <div className='flex gap-5'>
              <button className="btn btn-primary" onClick={()=>handleMarkAsRead(expectedBook)}>Read</button>
-            <button className="btn btn-primary">Wishlist</button>
+            <button className="btn btn-primary"onClick={()=>handleWishList(expectedBook)}>Wishlist</button>
            </div>
                 </div>
             </div>
